@@ -1,0 +1,64 @@
+.footer {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  background-color: #313131;
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* Espacio entre elementos en pantallas grandes */
+  align-items: center; /* Alinear verticalmente los elementos */
+  border-top: 1px solid #333;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.5)
+  );
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: #888;
+  text-align: center; /* Alinear el texto al centro */
+}
+
+.footer-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-icons .icon {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer-icons .icon:hover {
+  color: #646cffaa;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    align-items: center; /* Centrar los elementos verticalmente */
+    text-align: center; /* Alinear texto al centro */
+  }
+
+  .footer-text {
+    margin-bottom: 1rem; /* Espacio entre el texto y los iconos */
+  }
+
+  .footer-icons {
+    justify-content: center; /* Centrar los iconos */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-text {
+    font-size: 0.8rem; /* Ajustar el tamaño de fuente en pantallas pequeñas */
+  }
+
+  .footer-icons .icon {
+    font-size: 1.2rem; /* Reducir tamaño de iconos en pantallas pequeñas */
+  }
+}

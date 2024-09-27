@@ -1,0 +1,104 @@
+.personal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en columna en pantallas pequeñas */
+  text-align: center;
+}
+
+.personal-content {
+  max-width: 600px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personal-image img {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  animation: move-horizontal 10s linear infinite;
+}
+
+/* Keyframes para animar el movimiento de derecha a izquierda */
+@keyframes move-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.decorative-cloud {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 400px;
+  max-width: 80%; /* Ajustar el tamaño en pantallas pequeñas */
+  height: auto;
+  z-index: 1;
+  opacity: 0.3;
+  animation: move-horizontal 10s linear infinite;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 999;
+}
+
+.footer-icons .icon {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer-icons .icon:hover {
+  color: #646cffaa;
+}
+
+@media (max-width: 768px) {
+  .personal {
+    padding: 10px;
+  }
+
+  .personal-content {
+    max-width: 90%;
+  }
+
+  .personal-image img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .personal {
+    flex-direction: column; /* Elementos en columna para móviles */
+  }
+
+  .personal-content {
+    max-width: 100%; 
+  }
+
+  .personal-image img {
+    width: 80%; 
+    margin-bottom: 20px;
+  }
+
+  .decorative-cloud {
+    width: 250px; /* Reducir el tamaño del elemento decorativo en móviles */
+  }
+}
