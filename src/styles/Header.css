@@ -78,15 +78,15 @@
   }
 
   .header a {
-    font-size: 18px; /* Ajusta el tamaño del texto para tablets */
+    font-size: 18px;
   }
 }
 
 @media (max-width: 480px) {
   .header {
-    flex-direction: column; /* Cambiar dirección a columna en móviles */
+    flex-direction: column;
     align-items: center;
-    transform: translateX(0); /* Asegura que el header esté visible en móviles */
+    transform: translateX(0);
   }
 
   .header ul {
